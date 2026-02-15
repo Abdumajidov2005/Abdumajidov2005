@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/github/stars/Abdumajidov2005?style=flat&logo=github" />
 </p>
 
-
+[![Trophies](https://img.shields.io/badge/Trophies-🏆-yellow)](#)
 
 ---
 
