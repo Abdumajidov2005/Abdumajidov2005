@@ -34,10 +34,10 @@
   <a href="https://twitter.com/Otkirbek2005" target="_blank">
     <img src="https://img.shields.io/badge/-Twitter-1DA1F2?logo=twitter&logoColor=ffffff&style=flat-square" alt="Twitter" />
   </a>&nbsp;
-  <a href="https://www.instagram.com/otkirbek2005/" target="_blank">
+  <a href="https://www.instagram.com/abdumajidov__dev/" target="_blank">
     <img src="https://img.shields.io/badge/-Instagram-E4405F?logo=instagram&logoColor=ffffff&style=flat-square" alt="Instagram" />
   </a>&nbsp;
-  <a href="https://t.me/Otkirbek2005" target="_blank">
+  <a href="https://t.me/fronten_00" target="_blank">
     <img src="https://img.shields.io/badge/-Telegram-26A5E4?logo=telegram&logoColor=ffffff&style=flat-square" alt="Telegram" />
   </a>
 </p>
