@@ -20,31 +20,31 @@ Here are the main tools and technologies I use in frontend development:
 <img src="https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=ffffff&style=flat-square" alt="GitHub" />
  
 
-<div>
+
   <h3>🌐 Connect with me</h3>
 
-  <p>
-    <a href="https://github.com/Abdumajidov2005" target="_blank">
-      <img src="https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=ffffff&style=flat-square" alt="GitHub" /> 
-    </a>
-  </p>
 
-  <p>
-    <a href="https://www.linkedin.com/in/otkirbek-abdumajidov-6308a434b" target="_blank">
-      <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?logo=linkedin&logoColor=ffffff&style=flat-square" alt="LinkedIn" />
-    </a>
-  </p>
-
-  <p>
-    <a href="https://twitter.com/Otkirbek2005" target="_blank">
-      <img src="https://img.shields.io/badge/-Twitter-1DA1F2?logo=twitter&logoColor=ffffff&style=flat-square" alt="Twitter" /> 
-    </a>
-  </p>
-
-  <p>
-    <a href="mailto:otkirbekabdumajidov6@gmail.com" target="_blank">
+<p>
+  <a href="https://github.com/Abdumajidov2005" target="_blank">
+    <img src="https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=ffffff&style=flat-square" alt="GitHub" />
+  </a>&nbsp;
+  <a href="https://www.linkedin.com/in/otkirbek-abdumajidov-6308a434b" target="_blank">
+    <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?logo=linkedin&logoColor=ffffff&style=flat-square" alt="LinkedIn" />
+  </a>&nbsp;
+  <a href="https://twitter.com/Otkirbek2005" target="_blank">
+    <img src="https://img.shields.io/badge/-Twitter-1DA1F2?logo=twitter&logoColor=ffffff&style=flat-square" alt="Twitter" />
+  </a>&nbsp;
+  <a href="https://www.instagram.com/otkirbek2005/" target="_blank">
+    <img src="https://img.shields.io/badge/-Instagram-E4405F?logo=instagram&logoColor=ffffff&style=flat-square" alt="Instagram" />
+  </a>&nbsp;
+  <a href="https://t.me/Otkirbek2005" target="_blank">
+    <img src="https://img.shields.io/badge/-Telegram-26A5E4?logo=telegram&logoColor=ffffff&style=flat-square" alt="Telegram" />
+  </a>
+  <a href="mailto:otkirbekabdumajidov6@gmail.com" target="_blank">
       <img src="https://img.shields.io/badge/-Email-D14836?logo=gmail&logoColor=ffffff&style=flat-square" alt="Email" />
-    </a>
-  </p>
-</div>
+  </a>
+</p>
+
+
+
 
