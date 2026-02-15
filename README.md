@@ -5,7 +5,8 @@
   <img src="https://komarev.com/ghpvc/?username=Abdumajidov2005&label=Profile%20views&color=0e75b6&style=flat" />
   <img src="https://img.shields.io/github/followers/Abdumajidov2005?style=flat&logo=github" />
   <img src="https://img.shields.io/github/stars/Abdumajidov2005?style=flat&logo=github" />
-  <img src="https://img.shields.io/github/repo-count/Abdumajidov2005?style=flat&logo=github)](https://github.com/Abdumajidov2005?tab=repositories" />
+  ![Public Repos](https://img.shields.io/github/repo-count/Abdumajidov2005?style=flat&logo=github)
+
 </p>
 
 
