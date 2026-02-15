@@ -23,14 +23,8 @@
 
 ---
 
-## 📊 GitHub Stats
-
-![Abdumajidov's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Abdumajidov2005&show_icons=true&theme=radical)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=radical)
-
-## 🏆 GitHub Trophies
-
-![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=Abdumajidov2005&theme=radical)
+![Followers](https://img.shields.io/github/followers/Abdumajidov2005?style=flat&logo=github)
+![Repos](https://img.shields.io/github/repos/Abdumajidov2005?style=flat&logo=github)
 
 ---
 
