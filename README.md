@@ -6,6 +6,13 @@
 
 ![GitHub Streak](https://streak-stats.demolab.com?user=Abdumajidov2005&theme=radical&hide_border=false&date_format=M%20j%5B%2C%20Y%5D)
 
+<p>
+  <img src="https://img.shields.io/badge/JavaScript-45%25-yellow?style=flat-square" alt="JavaScript" />&nbsp;
+  <img src="https://img.shields.io/badge/TypeScript-30%25-blue?style=flat-square" alt="TypeScript" />&nbsp;
+  <img src="https://img.shields.io/badge/HTML-15%25-orange?style=flat-square" alt="HTML" />&nbsp;
+  <img src="https://img.shields.io/badge/CSS-10%25-blue?style=flat-square" alt="CSS" />
+</p>
+
 
 
 <!-- =================== Tech Stack =================== -->
