@@ -42,8 +42,6 @@
   </a>
 </p>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=radical&hide=html,css" alt="Top Languages" />
-
 
 
 
