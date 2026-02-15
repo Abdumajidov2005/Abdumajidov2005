@@ -8,7 +8,6 @@
 
 ![Top Languages](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=radical)
 
-![Top Languages](https://github-readme-stats-abdumajidov2005.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=radical&cache_seconds=1800)
 
 <!-- =================== Tech Stack =================== -->
 <h3>💻 Tech Stack</h3>
