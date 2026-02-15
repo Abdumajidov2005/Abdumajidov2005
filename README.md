@@ -1,4 +1,4 @@
-# Abdumajidov O'tkirbek
+<h1 align="center">Abdumajidov O'tkirbek<h1/>
 <p align="left"> 
   <img src="https://komarev.com/ghpvc/?username=Abdumajidov2005&label=Profile%20views&color=0e75b6&style=flat" alt="profile views" /> 
 </p>
