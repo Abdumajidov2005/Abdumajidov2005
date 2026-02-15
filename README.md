@@ -25,18 +25,12 @@
 
 ## 📊 GitHub Stats
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Abdumajidov2005&show_icons=true&theme=radical&cache_seconds=0" height="160" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=radical&cache_seconds=0" height="160" />
-</p>
-
----
+![Abdumajidov's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Abdumajidov2005&show_icons=true&theme=radical)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=radical)
 
 ## 🏆 GitHub Trophies
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Abdumajidov2005&theme=radical&no-frame=false&margin-w=5" />
-</p>
+![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=Abdumajidov2005&theme=radical)
 
 ---
 
