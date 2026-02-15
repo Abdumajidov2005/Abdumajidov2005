@@ -42,3 +42,31 @@ Here are the main tools and technologies I use in frontend development:
   </p>
 </div>
 
+<div>
+  <h3>🌐 Connect with me</h3>
+
+  <p>
+    <a href="https://github.com/Abdumajidov2005" target="_blank">
+      <img src="https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=ffffff&style=flat-square" alt="GitHub" /> GitHub
+    </a>
+  </p>
+
+  <p>
+    <a href="https://www.linkedin.com/in/otkirbek-abdumajidov-6308a434b" target="_blank">
+      <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?logo=linkedin&logoColor=ffffff&style=flat-square" alt="LinkedIn" /> LinkedIn
+    </a>
+  </p>
+
+  <p>
+    <a href="https://twitter.com/Otkirbek2005" target="_blank">
+      <img src="https://img.shields.io/badge/-Twitter-1DA1F2?logo=twitter&logoColor=ffffff&style=flat-square" alt="Twitter" /> Twitter
+    </a>
+  </p>
+
+  <p>
+    <a href="mailto:otkirbekabdumajidov6@gmail.com" target="_blank">
+      <img src="https://img.shields.io/badge/-Email-D14836?logo=gmail&logoColor=ffffff&style=flat-square" alt="Email" /> Email
+    </a>
+  </p>
+</div>
+
