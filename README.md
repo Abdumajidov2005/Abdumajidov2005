@@ -4,7 +4,8 @@
   <img src="https://komarev.com/ghpvc/?username=Abdumajidov2005&label=Profile%20views&color=0e75b6&style=flat" alt="profile views" /> 
 </p>
 
-![GitHub Streak](https://streak-stats.demolab.com?user=Abdumajidov2005&theme=radical&hide_border=false&date_format=M%20j%5B%2C%20Y%5D)
+![GitHub Streak](https://streak-stats.demolab.com?user=Abdumajidov2005&theme=radical&cache_seconds=0)
+
 
 
 
