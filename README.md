@@ -6,9 +6,7 @@
   <img src="https://img.shields.io/github/followers/Abdumajidov2005?style=flat&logo=github" />
   <img src="https://img.shields.io/github/stars/Abdumajidov2005?style=flat&logo=github" />
 </p>
-
-[![Trophies](https://img.shields.io/badge/Trophies-🏆-yellow)](#)
-
+[![Public Repos](https://img.shields.io/github/repo-count/Abdumajidov2005?style=flat&logo=github)](https://github.com/Abdumajidov2005?tab=repositories)
 ---
 
 ## 🔥 GitHub Streak
