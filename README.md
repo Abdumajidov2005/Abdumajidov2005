@@ -4,6 +4,10 @@
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=Abdumajidov2005&label=Profile%20views&color=0e75b6&style=flat" />
 </p>
+![Followers](https://img.shields.io/github/followers/Abdumajidov2005?style=flat&logo=github)
+![Public Repos](https://img.shields.io/github/repo-count/Abdumajidov2005?style=flat&logo=github)
+![Stars](https://img.shields.io/github/stars/Abdumajidov2005?style=flat&logo=github)
+
 
 ---
 
@@ -23,10 +27,6 @@
 
 ---
 
-![Followers](https://img.shields.io/github/followers/Abdumajidov2005?style=flat&logo=github)
-![Repos](https://img.shields.io/github/repos/Abdumajidov2005?style=flat&logo=github)
-
----
 
 ## 💻 Tech Stack
 
