@@ -4,7 +4,16 @@
   <img src="https://komarev.com/ghpvc/?username=Abdumajidov2005&label=Profile%20views&color=0e75b6&style=flat" alt="profile views" /> 
 </p>
 
-![GitHub Streak](https://streak-stats.demolab.com?user=Abdumajidov2005&theme=radical&cache_seconds=0)
+<picture>
+  <source 
+    srcset="https://streak-stats.demolab.com?user=Abdumajidov2005&theme=dark&cache_seconds=0" 
+    media="(prefers-color-scheme: dark)" />
+  <source 
+    srcset="https://streak-stats.demolab.com?user=Abdumajidov2005&theme=default&cache_seconds=0" 
+    media="(prefers-color-scheme: light)" />
+  <img src="https://streak-stats.demolab.com?user=Abdumajidov2005&cache_seconds=0" />
+</picture>
+
 
 
 
