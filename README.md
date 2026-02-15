@@ -42,22 +42,6 @@
   </a>
 </p>
 
-<!-- =================== GitHub Stats =================== -->
-<h3>📊 GitHub Stats</h3>
-<p>
-  <img src="https://github-readme-stats.vercel.app/api?username=Abdumajidov2005&show_icons=true&theme=radical" alt="GitHub Stats" />
-</p>
-<p>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=radical" alt="Top Languages" />
-</p>
-
-<!-- =================== Portfolio =================== -->
-<h3>📝 Portfolio / Projects</h3>
-<ul>
-  <li><a href="https://github.com/Abdumajidov2005/Project1" target="_blank">Project 1</a> - Short description</li>
-  <li><a href="https://github.com/Abdumajidov2005/Project2" target="_blank">Project 2</a> - Short description</li>
-  <li><a href="https://github.com/Abdumajidov2005/Project3" target="_blank">Project 3</a> - Short description</li>
-</ul>
 
 
 
