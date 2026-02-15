@@ -1,0 +1,2 @@
+# AbdumajidovO-tkirbek
+Birinchi readmi
