@@ -6,8 +6,6 @@
 
 ![GitHub Streak](https://streak-stats.demolab.com?user=Abdumajidov2005&theme=radical&hide_border=false&date_format=M%20j%5B%2C%20Y%5D)
 
-![Pull Request](https://github.com/Abdumajidov2005.png?tab=achievements&category=pull-request)
-
 
 <!-- =================== Tech Stack =================== -->
 <h3>💻 Tech Stack</h3>
