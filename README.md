@@ -9,15 +9,15 @@
 
 Here are the main tools and technologies I use in frontend development:
 
-<img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=000000&style=flat-square" alt="JavaScript" />
-<img src="https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=ffffff&style=flat-square" alt="TypeScript" />
-<img src="https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=000000&style=flat-square" alt="React" />
-<img src="https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=ffffff&style=flat-square" alt="HTML5" /> 
-<img src="https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=ffffff&style=flat-square" alt="CSS3" />
-<img src="https://img.shields.io/badge/-Tailwind_CSS-06B6D4?logo=tailwind-css&logoColor=ffffff&style=flat-square" alt="Tailwind CSS" />
-<img src="https://img.shields.io/badge/-Sass-CC6699?logo=sass&logoColor=ffffff&style=flat-square" alt="Sass" />
-<img src="https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=ffffff&style=flat-square" alt="Git" />
-<img src="https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=ffffff&style=flat-square" alt="GitHub" />
+<img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=000000" alt="JavaScript" />
+<img src="https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=ffffff" alt="TypeScript" />
+<img src="https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=000000" alt="React" />
+<img src="https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=ffffff" alt="HTML5" /> 
+<img src="https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=ffffff" alt="CSS3" />
+<img src="https://img.shields.io/badge/-Tailwind_CSS-06B6D4?logo=tailwind-css&logoColor=ffffff" alt="Tailwind CSS" />
+<img src="https://img.shields.io/badge/-Sass-CC6699?logo=sass&logoColor=ffffff" alt="Sass" />
+<img src="https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=ffffff" alt="Git" />
+<img src="https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=ffffff" alt="GitHub" />
  
 
 
