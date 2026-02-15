@@ -24,8 +24,6 @@
 </picture>
 </p>
 
-![Total Contributions](https://github-readme-stats.vercel.app/api?username=Abdumajidov2005&show_icons=true&theme=radical)
-
 
 ---
 
