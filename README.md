@@ -10,15 +10,9 @@
 
 ## 🚀 Tech Insights
 
-<div align="center">
 
+<div align="center">
 <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=tokyonight&hide_border=true" height="165"/>
-
-</div>
-
-<br/>
-
-<div align="center">
 
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Abdumajidov2005&theme=tokyonight" height="200"/>
 
