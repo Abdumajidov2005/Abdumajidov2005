@@ -27,7 +27,7 @@
 ## GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Abdumajidov2005&show_icons=true&theme=tokyonight&hide_border=true" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Abdumajidov2005&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
 </div>
 
 ## 🔥 GitHub Streak
