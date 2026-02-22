@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/github/stars/Abdumajidov2005?style=flat&logo=github" />
 </p>
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=tokyonight&cache_seconds=1800)
+![Top Langs](https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=tokyonight)
 
 ## 🔥 GitHub Streak
 
