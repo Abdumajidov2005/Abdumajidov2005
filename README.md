@@ -22,12 +22,12 @@
 
 
 
-<img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Abdumajidov2005&show_icons=true&theme=tokyonight&hide_border=true" height="170"/>
----
 
 ## 🔥 GitHub Streak
 
 <p align="center">
+<img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Abdumajidov2005&show_icons=true&theme=tokyonight&hide_border=true" height="170"/>
+  
 <picture>
   <source 
     srcset="https://streak-stats.demolab.com?user=Abdumajidov2005&theme=dark&cache_seconds=0" 
