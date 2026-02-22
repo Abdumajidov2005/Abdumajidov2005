@@ -9,10 +9,9 @@
 
 ![Top Langs](https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=tokyonight)
 
-## 📊 Language Stats
+## 🚀 Tech Insights
 
 ![](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Abdumajidov2005&theme=tokyonight)
-
 ![](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Abdumajidov2005&theme=tokyonight)
 
 ## 🔥 GitHub Streak
