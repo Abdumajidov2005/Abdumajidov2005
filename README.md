@@ -20,10 +20,10 @@
 
 </div>
 
+
+
+<img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Abdumajidov2005&show_icons=true&theme=tokyonight&hide_border=true" height="170"/>
 ---
-
-<img src="https://raw.githubusercontent.com/Abdumajidov2005/Abdumajidov2005/output/snake.svg" />
-
 
 ## 🔥 GitHub Streak
 
