@@ -48,11 +48,6 @@
 ---
 
 
-<img src="https://raw.githubusercontent.com/Abdumajidov2005/Abdumajidov2005/output/snake.svg" />
-
----
-
-
 ## 💻 Tech Stack
 
 <p>
