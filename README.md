@@ -7,7 +7,6 @@
   <img src="https://img.shields.io/github/stars/Abdumajidov2005?style=flat&logo=github" />
 </p>
 
-<img src="https://raw.githubusercontent.com/Abdumajidov2005/Abdumajidov2005/output/snake.svg" />
 
 ## 🚀 Tech Insights
 
@@ -20,6 +19,11 @@
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Abdumajidov2005&theme=tokyonight" height="170"/>
 
 </div>
+
+---
+
+<img src="https://raw.githubusercontent.com/Abdumajidov2005/Abdumajidov2005/output/snake.svg" />
+
 
 ## 🔥 GitHub Streak
 
