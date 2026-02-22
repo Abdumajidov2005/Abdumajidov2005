@@ -1,12 +1,15 @@
 <h1 align="center">Abdumajidov O'tkirbek</h1>
 <h3 align="center">🚀 Frontend Developer | React & Next.js Enthusiast</h3>
-<img src="https://raw.githubusercontent.com/Abdumajidov2005/Abdumajidov2005/output/snake.svg" />
+
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=Abdumajidov2005&label=Profile%20views&color=0e75b6&style=flat" />
   <img src="https://img.shields.io/github/followers/Abdumajidov2005?style=flat&logo=github" />
   <img src="https://img.shields.io/github/stars/Abdumajidov2005?style=flat&logo=github" />
 </p>
 
+## 🐍 Contribution Snake
+
+<img src="https://raw.githubusercontent.com/Abdumajidov2005/Abdumajidov2005/output/snake.svg" />
 
 ## 🚀 Tech Insights
 
