@@ -12,8 +12,6 @@
 
 
 <div align="center">
-<img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=tokyonight&hide_border=true" height="165"/>
-
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Abdumajidov2005&theme=tokyonight" height="200"/>
 
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Abdumajidov2005&theme=tokyonight" height="200"/>
@@ -23,6 +21,8 @@
 ## 🔥 GitHub Streak
 
 <p align="center">
+<img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=tokyonight&hide_border=true" height="165"/>
+  
 <picture>
   <source 
     srcset="https://streak-stats.demolab.com?user=Abdumajidov2005&theme=dark&cache_seconds=0" 
