@@ -21,7 +21,7 @@
 ## 🔥 GitHub Streak
 
 <p align="center">
-<img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=tokyonight&hide_border=true" height="165"/>
+<img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=tokyonight&hide_border=true"/>
   
 <picture>
   <source 
