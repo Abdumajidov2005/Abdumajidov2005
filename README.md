@@ -7,10 +7,7 @@
   <img src="https://img.shields.io/github/stars/Abdumajidov2005?style=flat&logo=github" />
 </p>
 
-## 📊 Most Used Languages
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=tokyonight)
----
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=tokyonight&cache_seconds=1800)
 
 ## 🔥 GitHub Streak
 
