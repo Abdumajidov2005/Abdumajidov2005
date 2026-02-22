@@ -11,6 +11,8 @@
 
 <img src="https://Abdumajidov2005.github.io/Abdumajidov2005/snake.svg" />
 
+<img src="https://github-profile-trophy.vercel.app/?username=Abdumajidov2005&theme=tokyonight&no-frame=true&row=1&column=6"/>
+
 ## 🚀 Tech Insights
 
 <div align="center">
