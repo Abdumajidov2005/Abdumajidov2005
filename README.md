@@ -7,6 +7,7 @@
   <img src="https://img.shields.io/github/stars/Abdumajidov2005?style=flat&logo=github" />
 </p>
 
+
 ## 🐍 Contribution Snake
 
 <img src="https://raw.githubusercontent.com/Abdumajidov2005/Abdumajidov2005/gh-pages/snake.svg" />
