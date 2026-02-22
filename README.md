@@ -9,7 +9,7 @@
 
 ## 🐍 Contribution Snake
 
-<img src="https://Abdumajidov2005.github.io/Abdumajidov2005/snake.svg" />
+<img src="https://raw.githubusercontent.com/Abdumajidov2005/Abdumajidov2005/gh-pages/snake.svg" />
 
 
 ## 🚀 Tech Insights
