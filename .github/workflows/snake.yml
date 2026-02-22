@@ -2,22 +2,27 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
+    - cron: "0 0 * * *"   # har kuni UTC bo‘yicha yarim kechada
+  workflow_dispatch:       # qo‘l bilan ishga tushirish imkoniyati
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+      # Repozitoriyani checkout qilish
       - uses: actions/checkout@v3
 
+      # dist papkasini yaratish
+      - run: mkdir -p dist
+
+      # Snake SVG generatsiya qilish
       - uses: Platane/snk@v3
         with:
           github_user_name: Abdumajidov2005
-          outputs: |
-            dist/snake.svg
+          outputs: dist/snake.svg
 
+      # Natijani 'output' branch-ga joylash
       - uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: output
