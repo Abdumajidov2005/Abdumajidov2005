@@ -6,6 +6,10 @@
   <img src="https://img.shields.io/badge/Coffee-Needed-6F4E37?style=for-the-badge&logo=caffeine&logoColor=white" />
 </p>
 <!-- MOOD_END -->
+
+<p align="center">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=Abdumajidov2005" alt="Visitor Badge" />
+</p>
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&color=00D1FF&lines=Hello+friends!;Welcome+to+my+GitHub+Profile" />
 </div>
