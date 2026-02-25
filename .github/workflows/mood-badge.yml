@@ -13,7 +13,7 @@ jobs:
 
       - name: Get daily contributions
         run: |
-          username="OtkirbekDEV"
+          username="Abdumajidov2005"
           date=$(date -u +"%Y-%m-%d")
           count=$(curl -s "https://api.github.com/users/$username/events" \
             | jq '[.[] | select(.type=="PushEvent" and (.created_at | startswith("'"$date"'")))] | length')
