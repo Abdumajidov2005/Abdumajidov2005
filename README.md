@@ -18,7 +18,6 @@
 <img width="100%" height="524" alt="image" src="gif programmer.png" />
 
 
-
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&color=00D1FF&center=true&vCenter=true&width=600&lines=Welcome+to+my+GitHub;Frontend+Developer;Always+Learning..." />
 </p>
@@ -30,6 +29,12 @@
   <img src="https://img.shields.io/github/followers/Abdumajidov2005?style=flat&logo=github" />
   <img src="https://img.shields.io/github/stars/Abdumajidov2005?style=flat&logo=github" />
 </p>
+
+## 📊 Graphs activity
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Abdumajidov2005&theme=dracula"/>
+  <img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Abdumajidov2005&theme=dark"/>
+</div>
 
 ## 🐍 Contribution Snake
 
