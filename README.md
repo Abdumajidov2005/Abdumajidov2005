@@ -6,7 +6,7 @@
 <h1 align="center">Abdumajidov O'tkirbek</h1>
 <h3 align="center">🚀 Frontend Developer | React & Next.js Enthusiast</h3>
 
-<img width="100%" height="524" alt="image" src="https://github.com/user-attachments/assets/97c301f0-d862-406c-8a75-b6d61b9265e1" />
+<img width="100%" height="524" alt="image" src="gif programmer.png" />
 
 
 <p align="center">
