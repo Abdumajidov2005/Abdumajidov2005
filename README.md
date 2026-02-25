@@ -7,9 +7,7 @@
 </p>
 <!-- MOOD_END -->
 
-<p align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=Abdumajidov2005" alt="Visitor Badge" />
-</p>
+
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&color=00D1FF&lines=Hello+friends!;Welcome+to+my+GitHub+Profile" />
 </div>
