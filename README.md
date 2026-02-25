@@ -1,12 +1,20 @@
+
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&color=00D1FF&lines=Hello+friends!;Welcome+to+my+GitHub+Profile" />
+</div>
+
 <h1 align="center">Abdumajidov O'tkirbek</h1>
 <h3 align="center">🚀 Frontend Developer | React & Next.js Enthusiast</h3>
+
+![GitHub Pulse](https://readmecodegen.com/icons/github?animation=pulse)
+
+
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=Abdumajidov2005&label=Profile%20views&color=0e75b6&style=flat" />
   <img src="https://img.shields.io/github/followers/Abdumajidov2005?style=flat&logo=github" />
   <img src="https://img.shields.io/github/stars/Abdumajidov2005?style=flat&logo=github" />
 </p>
-
 
 ## 🐍 Contribution Snake
 
