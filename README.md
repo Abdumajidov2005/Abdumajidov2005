@@ -1,4 +1,6 @@
 
+<img width="100%" height="524" alt="image" src="dev.gif" />
+
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&color=00D1FF&lines=Hello+friends!;Welcome+to+my+GitHub+Profile" />
 </div>
