@@ -1,6 +1,6 @@
 
 <img width="100%" height="524" alt="image" src="dev.gif" />
-
+<!-- MOOD_START -->🔥 Coding today<!-- MOOD_END -->
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&color=00D1FF&lines=Hello+friends!;Welcome+to+my+GitHub+Profile" />
 </div>
