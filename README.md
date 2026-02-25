@@ -1,16 +1,18 @@
 
 <img width="100%" height="524" alt="image" src="dev.gif" />
-<!-- MOOD_START -->🔥 Coding today<!-- MOOD_END -->
+<!-- MOOD_START -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Coding-Today-FE7C00?style=for-the-badge&logo=appveyor&logoColor=white" />
+  <img src="https://img.shields.io/badge/Coffee-Needed-6F4E37?style=for-the-badge&logo=caffeine&logoColor=white" />
+</p>
+<!-- MOOD_END -->
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&color=00D1FF&lines=Hello+friends!;Welcome+to+my+GitHub+Profile" />
 </div>
 
 <h1 align="center">Abdumajidov O'tkirbek</h1>
 <h3 align="center">🚀 Frontend Developer | React & Next.js Enthusiast</h3>
-<p align="center">
-  <img src="https://img.shields.io/badge/Coding-Today-FE7C00?style=for-the-badge&logo=appveyor&logoColor=white" />
-  <img src="https://img.shields.io/badge/Coffee-Needed-6F4E37?style=for-the-badge&logo=caffeine&logoColor=white" />
-</p>
+
 <img width="100%" height="524" alt="image" src="gif programmer.png" />
 
 
