@@ -18,6 +18,7 @@
 <img width="100%" height="524" alt="image" src="gif programmer.png" />
 
 
+
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&color=00D1FF&center=true&vCenter=true&width=600&lines=Welcome+to+my+GitHub;Frontend+Developer;Always+Learning..." />
 </p>
@@ -47,6 +48,9 @@
 
 </div>
 
+<div align="center">
+<img src="https://github-trophies.vercel.app/?username=Abdumajidov2005&theme=dracula"/>
+</div>
 
 ## GitHub Stats
 
@@ -100,3 +104,5 @@
     <img src="https://img.shields.io/badge/Telegram-26A5E4?logo=telegram&logoColor=white&style=flat-square" />
   </a>
 </p>
+
+
