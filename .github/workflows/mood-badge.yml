@@ -10,25 +10,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Get daily contributions
-        id: getcontrib
         run: |
-          username="Abdumajidov2005"
+          username="OtkirbekDEV"
           date=$(date -u +"%Y-%m-%d")
           count=$(curl -s "https://api.github.com/users/$username/events" \
             | jq '[.[] | select(.type=="PushEvent" and (.created_at | startswith("'"$date"'")))] | length')
           echo "contrib_count=$count" >> $GITHUB_ENV
-      - name: Set mood based on contributions
+
+      - name: Set mood badges
         run: |
-          if [ $contrib_count -eq 0 ]; then mood="😴 No coding"; fi
-          if [ $contrib_count -ge 1 ] && [ $contrib_count -le 3 ]; then mood="☕ Need coffee"; fi
-          if [ $contrib_count -ge 4 ] && [ $contrib_count -le 7 ]; then mood="💡 Brainstorming"; fi
-          if [ $contrib_count -ge 8 ]; then mood="🔥 Coding today"; fi
+          if [ $contrib_count -eq 0 ]; then mood="<p align='center'><img src='https://img.shields.io/badge/No-Coding-808080?style=for-the-badge' /><img src='https://img.shields.io/badge/Coffee-Needed-6F4E37?style=for-the-badge' /></p>"; fi
+          if [ $contrib_count -ge 1 ] && [ $contrib_count -le 3 ]; then mood="<p align='center'><img src='https://img.shields.io/badge/Coding-FE7C00?style=for-the-badge' /><img src='https://img.shields.io/badge/Coffee-Needed-6F4E37?style=for-the-badge' /></p>"; fi
+          if [ $contrib_count -ge 4 ] && [ $contrib_count -le 7 ]; then mood="<p align='center'><img src='https://img.shields.io/badge/Brainstorming-00D1FF?style=for-the-badge' /><img src='https://img.shields.io/badge/Coffee-Ready-FFD700?style=for-the-badge' /></p>"; fi
+          if [ $contrib_count -ge 8 ]; then mood="<p align='center'><img src='https://img.shields.io/badge/🔥-Coding-Today-FF0000?style=for-the-badge' /><img src='https://img.shields.io/badge/☕-Coffee-FFA500?style=for-the-badge' /></p>"; fi
           sed -i "s|<!-- MOOD_START -->.*<!-- MOOD_END -->|<!-- MOOD_START -->$mood<!-- MOOD_END -->|" README.md
+
       - name: Commit & Push
-  run: |
-    git config --global user.name "github-actions[bot]"
-    git config --global user.email "github-actions[bot]@users.noreply.github.com"
-    git add README.md
-    git diff --cached --quiet || git commit -m "Update mood badge by daily contributions"
-    git push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || git commit -m "Update mood badges by daily contributions"
+          git push
