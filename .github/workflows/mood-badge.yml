@@ -26,9 +26,9 @@ jobs:
           if [ $contrib_count -ge 8 ]; then mood="🔥 Coding today"; fi
           sed -i "s|<!-- MOOD_START -->.*<!-- MOOD_END -->|<!-- MOOD_START -->$mood<!-- MOOD_END -->|" README.md
       - name: Commit & Push
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "Update mood badge by daily contributions"
-          git push
+  run: |
+    git config --global user.name "github-actions[bot]"
+    git config --global user.email "github-actions[bot]@users.noreply.github.com"
+    git add README.md
+    git diff --cached --quiet || git commit -m "Update mood badge by daily contributions"
+    git push
