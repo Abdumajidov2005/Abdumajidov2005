@@ -9,8 +9,9 @@
 <img width="100%" height="824" alt="image" src="https://github.com/user-attachments/assets/97c301f0-d862-406c-8a75-b6d61b9265e1" />
 
 
-![GitHub Pulse](https://readmecodegen.com/icons/github?animation=pulse)
-
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&color=00D1FF&center=true&vCenter=true&width=600&lines=Welcome+to+my+GitHub;Frontend+Developer;Always+Learning..." />
+</p>
 
 
 <p align="center">
