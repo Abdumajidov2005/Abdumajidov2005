@@ -48,6 +48,8 @@
 
 </div>
 
+## 🏆 My GitHub Trophies
+
 <div align="center">
 <img src="https://github-trophies.vercel.app/?username=Abdumajidov2005&theme=dracula"/>
 </div>
