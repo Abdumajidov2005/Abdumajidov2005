@@ -1,7 +1,7 @@
 
 <img width="100%" height="524" alt="image" src="dev.gif" />
 <!-- MOOD_START -->
-Initial Mood
+<p align='center'><img src='https://img.shields.io/badge/Brainstorming-FFD700?style=for-the-badge' /><img src='https://img.shields.io/badge/Coffee%20Ready-6F4E37?style=for-the-badge' /></p>
 <!-- MOOD_END -->
 
 
