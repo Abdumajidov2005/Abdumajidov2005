@@ -1,7 +1,7 @@
 
 <img width="100%" height="524" alt="image" src="dev.gif" />
 <!-- MOOD_START -->
-<p align='center'><img src='https://img.shields.io/badge/Coding-FE7C00?style=for-the-badge' /><img src='https://img.shields.io/badge/Coffee-Needed-6F4E37?style=for-the-badge' /></p>
+<p align='center'><img src='https://img.shields.io/badge/Coding%20Today-FE7C00?style=for-the-badge' /><img src='https://img.shields.io/badge/Coffee%20Needed-6F4E37?style=for-the-badge' /></p>
 <!-- MOOD_END -->
 
 
