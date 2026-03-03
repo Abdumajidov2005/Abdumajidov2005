@@ -4,11 +4,13 @@
 <p align='center'><img src='https://img.shields.io/badge/Coding-00D1FF?style=for-the-badge' /><img src='https://img.shields.io/badge/Coffee%20Needed-6F4E37?style=for-the-badge' /></p>
 <!-- MOOD_END -->
 
+
+
 ## 🦈 Pull Shark Progress
 
-![Pull Shark Progress](https://img.shields.io/badge/dynamic/json?color=blue&label=Level&query=level&url=https://raw.githubusercontent.com/Abdumajidov2005/Abdumajidov2005/main/pr-progress.json)
-![Progress](https://img.shields.io/badge/dynamic/json?color=green&label=Progress&query=progress&url=https://raw.githubusercontent.com/Abdumajidov2005/Abdumajidov2005/main/pr-progress.json)
-
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Abdumajidov2005/Abdumajidov2005/main/pr-progress-bar.svg" width="90%" />
+</div>
 
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&color=00D1FF&lines=Hello+friends!;Welcome+to+my+GitHub+Profile" />
