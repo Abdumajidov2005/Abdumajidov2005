@@ -4,9 +4,16 @@ on:
   schedule:
     - cron: "0 0 * * *"  # Har kuni UTC 00:00 da
   workflow_dispatch:
+  push:
+    branches-ignore:
+      - main  # Push loop oldini olish
 
 permissions:
   contents: write
+
+concurrency:
+  group: update-mood-badge
+  cancel-in-progress: true
 
 jobs:
   update-mood:
@@ -23,16 +30,17 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -x
           username="Abdumajidov2005"
+          repo="${GITHUB_REPOSITORY}"
 
           since=$(date -u +"%Y-%m-%dT00:00:00Z")
           until=$(date -u +"%Y-%m-%dT23:59:59Z")
 
-          count=$(curl -s \
-            -H "Authorization: Bearer $GH_TOKEN" \
+          count=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
             -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/search/commits?q=author:$username+committer-date:$since..$until" \
-            | jq '.total_count')
+            "https://api.github.com/repos/$repo/commits?author=$username&since=$since&until=$until" \
+            | jq 'length')
 
           echo "Today's contributions: $count"
           echo "contrib_count=$count" >> $GITHUB_ENV
