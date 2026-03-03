@@ -11,10 +11,8 @@ jobs:
 
       - name: Count merged PRs and generate SVG
         run: |
-          # Pull request sonini olish
           COUNT=$(curl -s "https://api.github.com/search/issues?q=is:pr+is:merged+author:Abdumajidov2005" | jq '.total_count')
 
-          # Thresholdlar va ranglar
           declare -A LEVELS=( ["Bronze"]=2 ["Silver"]=16 ["Gold"]=128 ["Platinum"]=1024 )
           declare -A COLORS=( ["Bronze"]="#00FF00" ["Silver"]="#FFD700" ["Gold"]="#FF8C00" ["Platinum"]="#FF0000" )
 
