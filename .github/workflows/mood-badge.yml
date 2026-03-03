@@ -1,72 +1,56 @@
 name: Update Mood Badge by Contributions
 
 on:
-  schedule:
-    - cron: "0 0 * * *"  # Har kuni UTC 00:00 da
-  workflow_dispatch:
   push:
-    branches-ignore:
-      - main  # Push loop oldini olish
+    branches:
+      - main
 
 permissions:
   contents: write
-
-concurrency:
-  group: update-mood-badge
-  cancel-in-progress: true
 
 jobs:
   update-mood:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
       - name: Get today's commit count
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          set -x
           username="Abdumajidov2005"
           repo="${GITHUB_REPOSITORY}"
-
           since=$(date -u +"%Y-%m-%dT00:00:00Z")
           until=$(date -u +"%Y-%m-%dT23:59:59Z")
-
-          count=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
-            -H "Accept: application/vnd.github+json" \
+          count=$(curl -s -H "Accept: application/vnd.github+json" \
             "https://api.github.com/repos/$repo/commits?author=$username&since=$since&until=$until" \
             | jq 'length')
-
           echo "Today's contributions: $count"
-          echo "contrib_count=$count" >> $GITHUB_ENV
+          echo "CONTRIB_COUNT=$count" >> $GITHUB_ENV
 
       - name: Generate Mood Badge
         run: |
-          if [ "$contrib_count" -eq 0 ]; then
+          if [ "$CONTRIB_COUNT" -eq 0 ]; then
             mood="<p align='center'><img src='https://img.shields.io/badge/No%20Coding-808080?style=for-the-badge' /><img src='https://img.shields.io/badge/Coffee%20Needed-6F4E37?style=for-the-badge' /></p>"
-          elif [ "$contrib_count" -le 3 ]; then
+          elif [ "$CONTRIB_COUNT" -le 3 ]; then
             mood="<p align='center'><img src='https://img.shields.io/badge/Coding-00D1FF?style=for-the-badge' /><img src='https://img.shields.io/badge/Coffee%20Needed-6F4E37?style=for-the-badge' /></p>"
-          elif [ "$contrib_count" -le 7 ]; then
+          elif [ "$CONTRIB_COUNT" -le 7 ]; then
             mood="<p align='center'><img src='https://img.shields.io/badge/Brainstorming-FFD700?style=for-the-badge' /><img src='https://img.shields.io/badge/Coffee%20Ready-6F4E37?style=for-the-badge' /></p>"
           else
             mood="<p align='center'><img src='https://img.shields.io/badge/🔥%20Coding%20Today-FF0000?style=for-the-badge' /><img src='https://img.shields.io/badge/☕%20Coffee%20Mode-FFA500?style=for-the-badge' /></p>"
           fi
 
-          awk -v mood="$mood" '
-            /<!-- MOOD_START -->/ {print; print mood; skip=1; next}
-            /<!-- MOOD_END -->/ {skip=0}
-            !skip
-          ' README.md > temp.md && mv temp.md README.md
+          sed -i "/<!-- MOOD_START -->/,/<!-- MOOD_END -->/c\\
+<!-- MOOD_START -->\\
+$mood\\
+<!-- MOOD_END -->" README.md
 
       - name: Commit and Push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git diff --cached --quiet || git commit -m "Update mood badge by daily contributions"
+          git diff --cached --quiet || git commit -m "Update mood badge by contributions"
           git push
