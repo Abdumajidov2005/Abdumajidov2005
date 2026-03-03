@@ -4,7 +4,7 @@
 <p align='center'><img src='https://img.shields.io/badge/Coding-00D1FF?style=for-the-badge' /><img src='https://img.shields.io/badge/Coffee%20Needed-6F4E37?style=for-the-badge' /></p>
 <!-- MOOD_END -->
 
-
+![Merged PRs](https://img.shields.io/badge/Merged_PRs-0-blue)
 
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&color=00D1FF&lines=Hello+friends!;Welcome+to+my+GitHub+Profile" />
