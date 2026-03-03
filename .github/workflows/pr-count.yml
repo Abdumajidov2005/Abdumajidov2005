@@ -1,4 +1,4 @@
-name: Update PR Count
+name: Update Pull Shark Progress
 
 on:
   schedule:
@@ -14,12 +14,33 @@ jobs:
       - name: Count merged PRs
         run: |
           COUNT=$(curl -s "https://api.github.com/search/issues?q=is:pr+is:merged+author:Abdumajidov2005" | jq '.total_count')
-          sed -i "s/Merged PRs:.*/Merged PRs: $COUNT/" README.md
+
+          # Level thresholds
+          if [ $COUNT -ge 1024 ]; then
+            LEVEL="Platinum"
+            TARGET=1024
+          elif [ $COUNT -ge 128 ]; then
+            LEVEL="Gold"
+            TARGET=128
+          elif [ $COUNT -ge 16 ]; then
+            LEVEL="Silver"
+            TARGET=16
+          else
+            LEVEL="Bronze"
+            TARGET=2
+          fi
+
+          # Calculate progress %
+          PERCENT=$((COUNT * 100 / TARGET))
+          if [ $PERCENT -gt 100 ]; then PERCENT=100; fi
+
+          # Update JSON
+          echo "{ \"level\": \"$LEVEL\", \"progress\": \"$PERCENT% ($COUNT / $TARGET)\" }" > pr-progress.json
 
       - name: Commit changes
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add README.md
-          git commit -m "Update PR count" || exit 0
+          git add pr-progress.json
+          git commit -m "Update Pull Shark progress" || exit 0
           git push
