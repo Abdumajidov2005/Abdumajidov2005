@@ -11,36 +11,41 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Count merged PRs
+      - name: Count merged PRs and generate segmented SVG
         run: |
           COUNT=$(curl -s "https://api.github.com/search/issues?q=is:pr+is:merged+author:Abdumajidov2005" | jq '.total_count')
 
-          # Level thresholds
-          if [ $COUNT -ge 1024 ]; then
-            LEVEL="Platinum"
-            TARGET=1024
-          elif [ $COUNT -ge 128 ]; then
-            LEVEL="Gold"
-            TARGET=128
-          elif [ $COUNT -ge 16 ]; then
-            LEVEL="Silver"
-            TARGET=16
-          else
-            LEVEL="Bronze"
-            TARGET=2
-          fi
+          # Levels and thresholds
+          declare -A LEVELS=( ["Bronze"]=2 ["Silver"]=16 ["Gold"]=128 ["Platinum"]=1024 )
+          declare -A COLORS=( ["Bronze"]="#00FF00" ["Silver"]="#FFD700" ["Gold"]="#FF8C00" ["Platinum"]="#FF0000" )
 
-          # Calculate progress %
-          PERCENT=$((COUNT * 100 / TARGET))
-          if [ $PERCENT -gt 100 ]; then PERCENT=100; fi
+          SVG="<svg width='400' height='30'>"
+          X=0
+          BAR_WIDTH=100
 
-          # Update JSON
-          echo "{ \"level\": \"$LEVEL\", \"progress\": \"$PERCENT% ($COUNT / $TARGET)\" }" > pr-progress.json
+          for LEVEL in Bronze Silver Gold Platinum
+          do
+            TARGET=${LEVELS[$LEVEL]}
+            COLOR=${COLORS[$LEVEL]}
 
-      - name: Commit changes
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add pr-progress.json
-          git commit -m "Update Pull Shark progress" || exit 0
-          git push
+            if [ $COUNT -ge $TARGET ]; then
+              PERCENT=100
+            else
+              PERCENT=$((COUNT * 100 / TARGET))
+              if [ $PERCENT -gt 100 ]; then PERCENT=100; fi
+            fi
+
+            FILL_WIDTH=$((BAR_WIDTH * PERCENT / 100))
+
+            # Background for segment
+            SVG="$SVG<rect x='$X' y='0' width='$BAR_WIDTH' height='20' fill='#e0e0e0' />"
+            # Filled part
+            SVG="$SVG<rect x='$X' y='0' width='$FILL_WIDTH' height='20' fill='$COLOR' />"
+            # Level text
+            SVG="$SVG<text x=$(($X + BAR_WIDTH / 2)) y='15' font-size='10' text-anchor='middle' fill='#000'>$LEVEL</text>"
+
+            X=$((X + BAR_WIDTH))
+          done
+
+          SVG="$SVG</svg>"
+          echo "$SVG" > pr-progress-bar.svg
