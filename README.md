@@ -5,13 +5,6 @@
 <!-- MOOD_END -->
 
 
-
-## 🦈 Pull Shark Progress
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Abdumajidov2005/Abdumajidov2005/main/pr-progress-bar.svg" width="90%" />
-</div>
-
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&color=00D1FF&lines=Hello+friends!;Welcome+to+my+GitHub+Profile" />
 </div>
@@ -33,6 +26,12 @@
   <img src="https://img.shields.io/github/followers/Abdumajidov2005?style=flat&logo=github" />
   <img src="https://img.shields.io/github/stars/Abdumajidov2005?style=flat&logo=github" />
 </p>
+
+## 🦈 Pull Shark Progress
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Abdumajidov2005/Abdumajidov2005/main/pr-progress-bar.svg" width="90%" />
+</div>
 
 ## 📊 Graphs activity
 <div align="center">
