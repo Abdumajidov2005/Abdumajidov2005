@@ -11,12 +11,18 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: "mood-badge"
+  cancel-in-progress: true
+
 jobs:
   update-mood:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
@@ -42,22 +48,26 @@ jobs:
         run: |
           if [ "$CONTRIB_COUNT" -eq 0 ]; then
             mood="No Coding"
+            status="Needs Coffee"
             color="#808080"
           elif [ "$CONTRIB_COUNT" -le 3 ]; then
             mood="Coding"
+            status="Working"
             color="#00D1FF"
           elif [ "$CONTRIB_COUNT" -le 7 ]; then
             mood="Brainstorming"
+            status="Active"
             color="#FFD700"
           else
             mood="🔥 Coding Today"
+            status="On Fire"
             color="#FF0000"
           fi
 
-          # Contribution sonini badge ichiga qo‘shamiz
-          badge="<p align='center'><img src='https://img.shields.io/badge/${mood// /%20}(${CONTRIB_COUNT})-${color#'#'}?style=for-the-badge' /></p>"
+          # Badge yaratish
+          badge="<p align='center'><img src='https://img.shields.io/badge/${mood// /%20}(${CONTRIB_COUNT})-${color#'#'}?style=for-the-badge' /> $status</p>"
 
-          # README’ni yangilaymiz
+          # README’ni yangilash
           awk -v badge="$badge" '
             /<!-- MOOD_START -->/ {print; print badge; skip=1; next}
             /<!-- MOOD_END -->/ {skip=0}
