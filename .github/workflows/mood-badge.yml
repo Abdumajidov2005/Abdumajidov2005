@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "*/30 * * * *"   # Har 30 minutda tekshiradi
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -26,31 +26,16 @@ jobs:
           username="Abdumajidov2005"
           today=$(date -u +"%Y-%m-%d")
 
-          query=$(cat <<EOF
-          {
-            user(login: "$username") {
-              contributionsCollection(
-                from: "${today}T00:00:00Z",
-                to: "${today}T23:59:59Z"
-              ) {
-                contributionCalendar {
-                  totalContributions
-                }
-              }
-            }
-          }
-          EOF
-          )
+          query="{\"query\":\"{ user(login: \\\"$username\\\") { contributionsCollection(from: \\\"${today}T00:00:00Z\\\", to: \\\"${today}T23:59:59Z\\\") { contributionCalendar { totalContributions } } } }\"}"
 
           response=$(curl -s \
             -H "Authorization: bearer ${{ secrets.GITHUB_TOKEN }}" \
-            -X POST \
-            -d "{\"query\": \"$query\"}" \
+            -H "Content-Type: application/json" \
+            -d "$query" \
             https://api.github.com/graphql)
 
           count=$(echo $response | jq '.data.user.contributionsCollection.contributionCalendar.totalContributions')
 
-          echo "Today's global contributions: $count"
           echo "CONTRIB_COUNT=$count" >> $GITHUB_ENV
 
       - name: Generate Mood Badge
@@ -69,12 +54,13 @@ jobs:
             color="FF0000"
           fi
 
-          badge="<p align='center'><img src='https://img.shields.io/badge/$mood-$color?style=for-the-badge' /></p>"
+          badge="<p align='center'><img src='https://img.shields.io/badge/${mood// /%20}-$color?style=for-the-badge' /></p>"
 
-          sed -i "/<!-- MOOD_START -->/,/<!-- MOOD_END -->/c\\
-<!-- MOOD_START -->\\
-$badge\\
-<!-- MOOD_END -->" README.md
+          awk -v badge="$badge" '
+            /<!-- MOOD_START -->/ {print; print badge; skip=1; next}
+            /<!-- MOOD_END -->/ {skip=0}
+            !skip
+          ' README.md > temp.md && mv temp.md README.md
 
       - name: Commit and Push
         run: |
