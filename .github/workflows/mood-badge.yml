@@ -27,26 +27,24 @@ jobs:
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
-      - name: Get today's global contributions
+      - name: Get today's contributions
         run: |
           username="Abdumajidov2005"
-          today=$(date -u +"%Y-%m-%d")
+          today=$(date +"%Y-%m-%d")  # local time
 
-          # GraphQL query
           query=$(jq -n \
             --arg login "$username" \
             --arg from "${today}T00:00:00Z" \
             --arg to "${today}T23:59:59Z" \
             '{query:"{ user(login: \($login)) { contributionsCollection(from: \($from), to: \($to)) { contributionCalendar { totalContributions } } } }"}')
 
-          # Use Personal Access Token for reliable data
           response=$(curl -s \
             -H "Authorization: bearer ${{ secrets.PAT_TOKEN }}" \
             -H "Content-Type: application/json" \
             -d "$query" \
             https://api.github.com/graphql)
 
-          count=$(echo $response | jq '.data.user.contributionsCollection.contributionCalendar.totalContributions')
+          count=$(echo $response | jq '.data.user.contributionsCollection.contributionCalendar.totalContributions // 0')
           echo "CONTRIB_COUNT=$count" >> $GITHUB_ENV
           echo "Today's contributions: $count"
 
@@ -70,12 +68,10 @@ jobs:
             color="#FF0000"
           fi
 
-          # URL encode for badge
           mood_enc=$(echo "$mood" | sed 's/ /%20/g')
           status_enc=$(echo "$status" | sed 's/ /%20/g')
           badge="<p align='center'><img src='https://img.shields.io/badge/${mood_enc}(${CONTRIB_COUNT}%20${status_enc})-${color#'#'}?style=for-the-badge' /></p>"
 
-          # Update README
           awk -v badge="$badge" '
             /<!-- MOOD_START -->/ {print; print badge; skip=1; next}
             /<!-- MOOD_END -->/ {skip=0}
