@@ -1,7 +1,7 @@
 
 <img width="100%" height="524" alt="image" src="dev.gif" />
 <!-- MOOD_START -->
-<p align='center'><img src='https://img.shields.io/badge/🔥%20Coding%20Today(10)-FF0000?style=for-the-badge' /> On Fire</p>
+<p align='center'><img src='https://img.shields.io/badge/🔥%20Coding%20Today(11%20On%20Fire)-FF0000?style=for-the-badge' /></p>
 <!-- MOOD_END -->
 
 
