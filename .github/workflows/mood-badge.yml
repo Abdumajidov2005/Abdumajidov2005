@@ -68,7 +68,7 @@ jobs:
             color="#FF0000"
           fi
 
-          # URL encode for badge
+          # URL encode
           mood_enc=$(echo "$mood" | sed 's/ /%20/g')
           status_enc=$(echo "$status" | sed 's/ /%20/g')
           badge="<p align='center'><img src='https://img.shields.io/badge/${mood_enc}(${CONTRIB_COUNT}%20${status_enc})-${color#'#'}?style=for-the-badge' /></p>"
@@ -90,3 +90,4 @@ jobs:
             git push
           else
             echo "No changes in README, skipping commit."
+          fi
