@@ -1,7 +1,7 @@
 
 <img width="100%" height="524" alt="image" src="dev.gif" />
 <!-- MOOD_START -->
-<p align='center'><img src='https://img.shields.io/badge/Brainstorming(5)-FFD700?style=for-the-badge' /></p>
+<p align='center'><img src='https://img.shields.io/badge/Brainstorming(7)-FFD700?style=for-the-badge' /> Active</p>
 <!-- MOOD_END -->
 
 
