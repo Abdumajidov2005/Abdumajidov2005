@@ -1,11 +1,11 @@
-name: Update Global Mood Badge
+name: Update Mood Badge
 
 on:
   push:
     branches:
       - main
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "0 21 * * *"
   workflow_dispatch:
 
 permissions:
@@ -42,20 +42,22 @@ jobs:
         run: |
           if [ "$CONTRIB_COUNT" -eq 0 ]; then
             mood="No Coding"
-            color="808080"
+            color="#808080"
           elif [ "$CONTRIB_COUNT" -le 3 ]; then
             mood="Coding"
-            color="00D1FF"
+            color="#00D1FF"
           elif [ "$CONTRIB_COUNT" -le 7 ]; then
             mood="Brainstorming"
-            color="FFD700"
+            color="#FFD700"
           else
             mood="🔥 Coding Today"
-            color="FF0000"
+            color="#FF0000"
           fi
 
-          badge="<p align='center'><img src='https://img.shields.io/badge/${mood// /%20}-$color?style=for-the-badge' /></p>"
+          # Contribution sonini badge ichiga qo‘shamiz
+          badge="<p align='center'><img src='https://img.shields.io/badge/${mood// /%20}(${CONTRIB_COUNT})-${color#'#'}?style=for-the-badge' /></p>"
 
+          # README’ni yangilaymiz
           awk -v badge="$badge" '
             /<!-- MOOD_START -->/ {print; print badge; skip=1; next}
             /<!-- MOOD_END -->/ {skip=0}
