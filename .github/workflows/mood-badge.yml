@@ -1,9 +1,9 @@
-name: Update Mood Badge by Contributions
+name: Update Global Mood Badge
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: "0 21 * * *"   # Har kuni 21:00 UTC
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -15,19 +15,33 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install jq
-        run: sudo apt-get update && sudo apt-get install -y jq
-
-      - name: Get today's commit count
+      - name: Get today's global contributions
         run: |
           username="Abdumajidov2005"
-          repo="${GITHUB_REPOSITORY}"
-          since=$(date -u +"%Y-%m-%dT00:00:00Z")
-          until=$(date -u +"%Y-%m-%dT23:59:59Z")
-          count=$(curl -s -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/$repo/commits?author=$username&since=$since&until=$until" \
-            | jq 'length')
-          echo "Today's contributions: $count"
+          today=$(date -u +"%Y-%m-%d")
+
+          query=$(cat <<EOF
+          {
+            user(login: "$username") {
+              contributionsCollection(from: "${today}T00:00:00Z", to: "${today}T23:59:59Z") {
+                contributionCalendar {
+                  totalContributions
+                }
+              }
+            }
+          }
+          EOF
+          )
+
+          response=$(curl -s \
+            -H "Authorization: bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -X POST \
+            -d "{\"query\": \"$query\"}" \
+            https://api.github.com/graphql)
+
+          count=$(echo $response | jq '.data.user.contributionsCollection.contributionCalendar.totalContributions')
+
+          echo "Today's global contributions: $count"
           echo "CONTRIB_COUNT=$count" >> $GITHUB_ENV
 
       - name: Generate Mood Badge
@@ -52,5 +66,5 @@ $mood\\
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git diff --cached --quiet || git commit -m "Update mood badge by contributions"
+          git diff --cached --quiet || git commit -m "Update global mood badge"
           git push
