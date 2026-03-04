@@ -1,11 +1,11 @@
 name: Update Mood Badge
 
 on:
+  schedule:
+    - cron: "0 17 * * *"   # 22:00 lokal (UTC+5)
   push:
     branches:
       - main
-  schedule:
-    - cron: "0 21 * * *"
   workflow_dispatch:
 
 permissions:
@@ -30,8 +30,8 @@ jobs:
       - name: Get today's contributions
         run: |
           username="Abdumajidov2005"
-          today=$(date +"%Y-%m-%d")  # local time
-
+          today=$(date +"%Y-%m-%d")  # lokal vaqt
+          
           query=$(jq -n \
             --arg login "$username" \
             --arg from "${today}T00:00:00Z" \
@@ -68,10 +68,12 @@ jobs:
             color="#FF0000"
           fi
 
+          # URL encode for badge
           mood_enc=$(echo "$mood" | sed 's/ /%20/g')
           status_enc=$(echo "$status" | sed 's/ /%20/g')
           badge="<p align='center'><img src='https://img.shields.io/badge/${mood_enc}(${CONTRIB_COUNT}%20${status_enc})-${color#'#'}?style=for-the-badge' /></p>"
 
+          # Update README
           awk -v badge="$badge" '
             /<!-- MOOD_START -->/ {print; print badge; skip=1; next}
             /<!-- MOOD_END -->/ {skip=0}
@@ -88,4 +90,3 @@ jobs:
             git push
           else
             echo "No changes in README, skipping commit."
-          fi
