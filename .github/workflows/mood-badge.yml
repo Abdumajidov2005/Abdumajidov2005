@@ -65,8 +65,7 @@ jobs:
           fi
 
           # Badge yaratish
-          badge="<p align='center'><img src='https://img.shields.io/badge/${mood// /%20}(${CONTRIB_COUNT})-${color#'#'}?style=for-the-badge' /> $status</p>"
-
+          badge="<p align='center'><img src='https://img.shields.io/badge/${mood// /%20}(${CONTRIB_COUNT}%20${status// /%20})-${color#'#'}?style=for-the-badge' /></p>"
           # README’ni yangilash
           awk -v badge="$badge" '
             /<!-- MOOD_START -->/ {print; print badge; skip=1; next}
