@@ -1,11 +1,11 @@
 name: Update Global Mood Badge
 
 on:
-push:
+  push:
     branches:
       - main
   schedule:
-    - cron: "0 21 * * *"   # Har kuni 21:00 UTC
+    - cron: "*/30 * * * *"   # Har 30 minutda tekshiradi
   workflow_dispatch:
 
 permissions:
@@ -18,6 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
       - name: Get today's global contributions
         run: |
           username="Abdumajidov2005"
@@ -26,7 +29,10 @@ jobs:
           query=$(cat <<EOF
           {
             user(login: "$username") {
-              contributionsCollection(from: "${today}T00:00:00Z", to: "${today}T23:59:59Z") {
+              contributionsCollection(
+                from: "${today}T00:00:00Z",
+                to: "${today}T23:59:59Z"
+              ) {
                 contributionCalendar {
                   totalContributions
                 }
@@ -50,18 +56,24 @@ jobs:
       - name: Generate Mood Badge
         run: |
           if [ "$CONTRIB_COUNT" -eq 0 ]; then
-            mood="<p align='center'><img src='https://img.shields.io/badge/No%20Coding-808080?style=for-the-badge' /><img src='https://img.shields.io/badge/Coffee%20Needed-6F4E37?style=for-the-badge' /></p>"
+            mood="No Coding"
+            color="808080"
           elif [ "$CONTRIB_COUNT" -le 3 ]; then
-            mood="<p align='center'><img src='https://img.shields.io/badge/Coding-00D1FF?style=for-the-badge' /><img src='https://img.shields.io/badge/Coffee%20Needed-6F4E37?style=for-the-badge' /></p>"
+            mood="Coding"
+            color="00D1FF"
           elif [ "$CONTRIB_COUNT" -le 7 ]; then
-            mood="<p align='center'><img src='https://img.shields.io/badge/Brainstorming-FFD700?style=for-the-badge' /><img src='https://img.shields.io/badge/Coffee%20Ready-6F4E37?style=for-the-badge' /></p>"
+            mood="Brainstorming"
+            color="FFD700"
           else
-            mood="<p align='center'><img src='https://img.shields.io/badge/🔥%20Coding%20Today-FF0000?style=for-the-badge' /><img src='https://img.shields.io/badge/☕%20Coffee%20Mode-FFA500?style=for-the-badge' /></p>"
+            mood="🔥 Coding Today"
+            color="FF0000"
           fi
+
+          badge="<p align='center'><img src='https://img.shields.io/badge/$mood-$color?style=for-the-badge' /></p>"
 
           sed -i "/<!-- MOOD_START -->/,/<!-- MOOD_END -->/c\\
 <!-- MOOD_START -->\\
-$mood\\
+$badge\\
 <!-- MOOD_END -->" README.md
 
       - name: Commit and Push
