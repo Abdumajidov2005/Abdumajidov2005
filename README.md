@@ -48,11 +48,11 @@
 
 <div align="center">
 
-<img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=tokyonight&hide_border=true" height="170"/>
+<img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Abdumajidov2005&layout=compact&theme=tokyonight&hide_border=true" />
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Abdumajidov2005&theme=tokyonight" height="170"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Abdumajidov2005&theme=tokyonight"/>
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Abdumajidov2005&theme=tokyonight" height="170"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Abdumajidov2005&theme=tokyonight" />
 
 </div>
 
