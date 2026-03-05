@@ -18,7 +18,7 @@ jobs:
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
-      - name: Get Contributions Data
+      - name: Get Contributions Data (Debug)
         env:
           TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
@@ -26,6 +26,8 @@ jobs:
 
           today=$(TZ=Asia/Tashkent date +"%Y-%m-%d")
           week_ago=$(TZ=Asia/Tashkent date -d "7 days ago" +"%Y-%m-%d")
+
+          echo "Today: $today, Week ago: $week_ago"
 
           query=$(jq -n \
             --arg login "$username" \
@@ -44,11 +46,18 @@ jobs:
               variables: {login:$login, from:$from, to:$to}
             }')
 
+          echo "GraphQL Query:"
+          echo "$query"
+
           response=$(curl -s -H "Authorization: bearer $TOKEN" \
             -H "Content-Type: application/json" \
             -d "$query" https://api.github.com/graphql)
 
+          echo "GraphQL Response:"
+          echo "$response"
+
           total=$(echo "$response" | jq '.data.user.contributionsCollection.contributionCalendar.totalContributions // 0')
+          echo "TOTAL CONTRIBUTIONS: $total"
 
           echo "WEEK_COUNT=$total" >> $GITHUB_ENV
 
@@ -105,7 +114,7 @@ jobs:
 
           sed -i "/<!-- MOOD_START -->/a <p align='center'><img src='mood.svg' width='500'/></p>" README.md
 
-      - name: Commit
+      - name: Commit Changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
