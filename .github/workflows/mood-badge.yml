@@ -1,93 +1,114 @@
-name: Update Mood Badge
+name: 🚀 Premium Mood System
 
 on:
   schedule:
-    - cron: "0 17 * * *"   # 22:00 lokal (UTC+5)
-  push:
-    branches:
-      - main
+    - cron: "*/30 * * * *"   # Har 30 minut
   workflow_dispatch:
 
 permissions:
   contents: write
 
-concurrency:
-  group: "mood-badge"
-  cancel-in-progress: true
-
 jobs:
-  update-mood:
+  update:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
-      - name: Get today's contributions
+      - name: Get Contributions Data
+        env:
+          TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           username="Abdumajidov2005"
-          today=$(date +"%Y-%m-%d")  # lokal vaqt
-          
+
+          today=$(TZ=Asia/Tashkent date +"%Y-%m-%d")
+          week_ago=$(TZ=Asia/Tashkent date -d "7 days ago" +"%Y-%m-%d")
+
           query=$(jq -n \
             --arg login "$username" \
-            --arg from "${today}T00:00:00Z" \
+            --arg from "${week_ago}T00:00:00Z" \
             --arg to "${today}T23:59:59Z" \
-            '{query:"{ user(login: \($login)) { contributionsCollection(from: \($from), to: \($to)) { contributionCalendar { totalContributions } } } }"}')
+            '{
+              query: "query($login:String!, $from:DateTime!, $to:DateTime!) {
+                user(login:$login) {
+                  contributionsCollection(from:$from, to:$to) {
+                    contributionCalendar {
+                      totalContributions
+                    }
+                  }
+                }
+              }",
+              variables: {login:$login, from:$from, to:$to}
+            }')
 
-          response=$(curl -s \
-            -H "Authorization: bearer ${{ secrets.PAT_TOKEN }}" \
+          response=$(curl -s -H "Authorization: bearer $TOKEN" \
             -H "Content-Type: application/json" \
-            -d "$query" \
-            https://api.github.com/graphql)
+            -d "$query" https://api.github.com/graphql)
 
-          count=$(echo $response | jq '.data.user.contributionsCollection.contributionCalendar.totalContributions // 0')
-          echo "CONTRIB_COUNT=$count" >> $GITHUB_ENV
-          echo "Today's contributions: $count"
+          total=$(echo "$response" | jq '.data.user.contributionsCollection.contributionCalendar.totalContributions // 0')
 
-      - name: Generate Mood Badge
+          echo "WEEK_COUNT=$total" >> $GITHUB_ENV
+
+      - name: Generate Animated SVG Badge
         run: |
-          if [ "$CONTRIB_COUNT" -eq 0 ]; then
-            mood="No Coding"
-            status="Needs Coffee"
-            color="#808080"
-          elif [ "$CONTRIB_COUNT" -le 3 ]; then
-            mood="Coding"
-            status="Working"
-            color="#00D1FF"
-          elif [ "$CONTRIB_COUNT" -le 7 ]; then
-            mood="Brainstorming"
-            status="Active"
-            color="#FFD700"
+          count=$WEEK_COUNT
+
+          if [ "$count" -eq 0 ]; then
+            mood="Sleeping 😴"
+          elif [ "$count" -le 10 ]; then
+            mood="Coding Mode 💻"
+          elif [ "$count" -le 25 ]; then
+            mood="Beast Mode 🔥"
           else
-            mood="🔥 Coding Today"
-            status="On Fire"
-            color="#FF0000"
+            mood="ON FIRE 🚀"
           fi
 
-          # URL encode
-          mood_enc=$(echo "$mood" | sed 's/ /%20/g')
-          status_enc=$(echo "$status" | sed 's/ /%20/g')
-          badge="<p align='center'><img src='https://img.shields.io/badge/${mood_enc}(${CONTRIB_COUNT}%20${status_enc})-${color#'#'}?style=for-the-badge' /></p>"
+          cat <<EOF > mood.svg
+          <svg width="500" height="120" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="grad">
+                <stop offset="0%" stop-color="#ff0000">
+                  <animate attributeName="stop-color"
+                    values="#ff0000;#ff7300;#fffb00;#48ff00;#00ffd5;#002bff;#7a00ff;#ff00c8;#ff0000"
+                    dur="8s" repeatCount="indefinite"/>
+                </stop>
+                <stop offset="100%" stop-color="#00ffff">
+                  <animate attributeName="stop-color"
+                    values="#00ffff;#ff00ff;#ffff00;#00ffff"
+                    dur="6s" repeatCount="indefinite"/>
+                </stop>
+              </linearGradient>
+            </defs>
 
-          # Update README
-          awk -v badge="$badge" '
-            /<!-- MOOD_START -->/ {print; print badge; skip=1; next}
-            /<!-- MOOD_END -->/ {skip=0}
-            !skip
-          ' README.md > temp.md && mv temp.md README.md
+            <rect width="500" height="120" rx="20" fill="url(#grad)"/>
+            
+            <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle"
+              font-size="28" fill="white" font-family="Verdana">
+              $mood
+            </text>
 
-      - name: Commit and Push
+            <text x="50%" y="75%" dominant-baseline="middle" text-anchor="middle"
+              font-size="20" fill="white" font-family="Verdana">
+              Weekly Contributions: $count
+            </text>
+          </svg>
+          EOF
+
+      - name: Update README
+        run: |
+          sed -i '/<!-- MOOD_START -->/,/<!-- MOOD_END -->/{
+          /<!-- MOOD_START -->/!{/<!-- MOOD_END -->/!d}
+          }' README.md
+
+          sed -i "/<!-- MOOD_START -->/a <p align='center'><img src='mood.svg' width='500'/></p>" README.md
+
+      - name: Commit
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          if ! git diff --cached --quiet; then
-            git commit -m "Update global mood badge"
-            git push
-          else
-            echo "No changes in README, skipping commit."
-          fi
+          git add .
+          git commit -m "🚀 Update Premium Mood System" || echo "No changes"
+          git push
