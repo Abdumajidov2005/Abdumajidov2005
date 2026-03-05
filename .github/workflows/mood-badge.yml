@@ -1,8 +1,8 @@
-name: 🚀 Premium Mood System
+name: 🚀 Premium Mood System (Debug)
 
 on:
   schedule:
-    - cron: "*/30 * * * *"   # Har 30 minut
+    - cron: "*/30 * * * *"   # har 30 minut
   workflow_dispatch:
 
 permissions:
@@ -24,10 +24,12 @@ jobs:
         run: |
           username="Abdumajidov2005"
 
+          # Timezone: Toshkent
           today=$(TZ=Asia/Tashkent date +"%Y-%m-%d")
           week_ago=$(TZ=Asia/Tashkent date -d "7 days ago" +"%Y-%m-%d")
 
-          echo "Today: $today, Week ago: $week_ago"
+          echo "Today: $today"
+          echo "Week ago: $week_ago"
 
           query=$(jq -n \
             --arg login "$username" \
