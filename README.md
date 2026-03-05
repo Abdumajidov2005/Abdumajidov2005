@@ -1,7 +1,7 @@
 
 <img width="100%" height="524" alt="image" src="dev.gif" />
 <!-- MOOD_START -->
-<p align='center'><img src='https://img.shields.io/badge/No%20Coding(0%20Needs%20Coffee)-808080?style=for-the-badge' /></p>
+<p align='center'><img src='mood.svg' width='500'/></p>
 <!-- MOOD_END -->
 
 

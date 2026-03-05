@@ -1,0 +1,28 @@
+<svg width="500" height="120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad">
+      <stop offset="0%" stop-color="#ff0000">
+        <animate attributeName="stop-color"
+          values="#ff0000;#ff7300;#fffb00;#48ff00;#00ffd5;#002bff;#7a00ff;#ff00c8;#ff0000"
+          dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#00ffff">
+        <animate attributeName="stop-color"
+          values="#00ffff;#ff00ff;#ffff00;#00ffff"
+          dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="120" rx="20" fill="url(#grad)"/>
+  
+  <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle"
+    font-size="28" fill="white" font-family="Verdana">
+    Sleeping 😴
+  </text>
+
+  <text x="50%" y="75%" dominant-baseline="middle" text-anchor="middle"
+    font-size="20" fill="white" font-family="Verdana">
+    Weekly Contributions: 0
+  </text>
+</svg>
