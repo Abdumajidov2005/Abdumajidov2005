@@ -1,7 +1,6 @@
 
 <img width="100%" height="524" alt="image" src="dev.gif" />
 <!-- MOOD_START -->
-<p align='center'><img src='mood.svg' width='500'/></p>
 <!-- MOOD_END -->
 
 
