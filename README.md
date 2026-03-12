@@ -3,6 +3,7 @@
 <p align='center'><img src='mood.svg' width='500'/></p>
 <!-- MOOD_END -->
 
+
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&color=00D1FF&lines=Hello+friends!;Welcome+to+my+GitHub+Profile" />
 </div>
@@ -113,4 +114,5 @@
   </a>
 </p>
 
+![Weather](https://wttr.in/Tashkent.png)
 
