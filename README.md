@@ -114,5 +114,5 @@
   </a>
 </p>
 
-![Weather](https://wttr.in/Tashkent.png)
+![Weather](https://wttr.in/Fergana.png)
 
