@@ -114,5 +114,5 @@
   </a>
 </p>
 
-![Weather](https://wttr.in/Andijan.png)
+![Weather](https://wttr.in/Fergana.png)
 
