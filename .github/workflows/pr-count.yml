@@ -26,19 +26,14 @@ jobs:
         run: |
           set -e
 
-          QUERY='
-          {
-            user(login: "'$GITHUB_USER'") {
-              pullRequests(states: MERGED) {
-                totalCount
-              }
-            }
-          }
-          '
-
-          RESPONSE=$(curl -s -H "Authorization: bearer $TOKEN" \
+          RESPONSE=$(curl -s \
+            -H "Authorization: bearer $TOKEN" \
+            -H "Content-Type: application/json" \
             -X POST https://api.github.com/graphql \
-            -d "{\"query\": \"$QUERY\"}")
+            -d @- <<EOF
+          {
+            "query": "query { user(login: \"$GITHUB_USER\") { pullRequests(states: MERGED) { totalCount } } }"
+          }EOF)
 
           echo "API response:"
           echo "$RESPONSE"
@@ -55,8 +50,7 @@ jobs:
 
       - name: Generate SVG
         run: |
-          COUNT=${{ env.COUNT }}
-
+          COUNT=${{env.COUNT}}
           LEVELS=("Bronze" "Silver" "Gold" "Platinum")
           TARGETS=(2 16 128 1024)
           COLORS=("#cd7f32" "#c0c0c0" "#ffd700" "#e5e4e2")
