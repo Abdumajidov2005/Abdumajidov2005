@@ -7,7 +7,9 @@ on:
 
 jobs:
   update:
-    if: github.event.pull_request.merged == true
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
 
     steps:
@@ -43,13 +45,12 @@ jobs:
 
           COUNT=$(echo "$RESPONSE" | jq '.data.user.pullRequests.totalCount')
 
-          if [ "$COUNT" == "null" ]; then
+          if [ "$COUNT" == "null" ] || [ -z "$COUNT" ]; then
             echo "Error: Could not fetch PR count"
             exit 1
           fi
 
           echo "Merged PRs: $COUNT"
-
           echo "COUNT=$COUNT" >> $GITHUB_ENV
 
       - name: Generate SVG
