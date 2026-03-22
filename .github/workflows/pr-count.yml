@@ -19,18 +19,19 @@ jobs:
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
-      - name: Count merged PRs (GraphQL)
+      - name: Count merged PRs (GraphQL, private & public)
         env:
           TOKEN: ${{ secrets.PAT_TOKEN }}
           GITHUB_USER: Abdumajidov2005
         run: |
           set -e
 
+          # GraphQL query: private + public PRs
           RESPONSE=$(curl -s \
             -H "Authorization: bearer $TOKEN" \
             -H "Content-Type: application/json" \
             -X POST https://api.github.com/graphql \
-            -d "{\"query\":\"query { user(login: \\\"$GITHUB_USER\\\") { pullRequests(states: MERGED) { totalCount } } }\"}"
+            -d "{\"query\":\"query { user(login: \\\"$GITHUB_USER\\\") { pullRequests(states: MERGED, first: 100) { totalCount nodes { repository { name isPrivate } } } } }\"}"
           )
 
           echo "API response:"
