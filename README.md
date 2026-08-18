@@ -2,7 +2,7 @@
 
 
 <h1 align="center">Abdumajidov O'tkirbek</h1>
-<h3 align="center">🚀 Frontend Developer | React & Next.js Enthusiast</h3>
+<h3 align="center">🚀 Frontend Developer | React & VueJs & NuxtJs</h3>
 
 
 <p align="center">
