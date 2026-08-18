@@ -1,10 +1,6 @@
 <img width="100%" height="524" alt="image" src="dev.gif" />
 
 
-<div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&color=00D1FF&lines=Hello+friends!;Welcome+to+my+GitHub+Profile" />
-</div>
-
 <h1 align="center">Abdumajidov O'tkirbek</h1>
 <h3 align="center">🚀 Frontend Developer | React & Next.js Enthusiast</h3>
 
@@ -108,6 +104,4 @@
     <img src="https://img.shields.io/badge/Telegram-26A5E4?logo=telegram&logoColor=white&style=flat-square" />
   </a>
 </p>
-
-![Weather](https://wttr.in/Fergana.png)
 
