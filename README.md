@@ -80,7 +80,7 @@
 ## 💻 Tech Stack
 
 <p>
-  <img src="https://skillicons.dev/icons?i=js,ts,react,next,html,css,tailwind,sass,flutter,dart,php,kotlin,python,git,github,cpp,cs" />
+  <img src="https://skillicons.dev/icons?i=js,ts,react,vue,nuxt,html,css,tailwind,sass,git,github" />
 </p>
 
 ---
