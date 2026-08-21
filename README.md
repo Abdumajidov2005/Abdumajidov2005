@@ -23,9 +23,6 @@
   <img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Abdumajidov2005&theme=dark"/>
 </div>
 
-## 🐍 Contribution Snake
-
-<img src="https://raw.githubusercontent.com/Abdumajidov2005/Abdumajidov2005/gh-pages/snake.svg" />
 
 
 ## 🚀 Tech Insights
@@ -99,3 +96,6 @@
   </a>
 </p>
 
+## 🐍 Contribution Snake
+
+<img src="https://raw.githubusercontent.com/Abdumajidov2005/Abdumajidov2005/gh-pages/snake.svg" />
