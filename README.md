@@ -17,12 +17,6 @@
   <img src="https://img.shields.io/github/stars/Abdumajidov2005?style=flat&logo=github" />
 </p>
 
-## 🦈 Pull Shark Progress
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Abdumajidov2005/Abdumajidov2005/main/pr-progress-bar.svg" width="90%" />
-</div>
-
 ## 📊 Graphs activity
 <div align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Abdumajidov2005&theme=dracula"/>
