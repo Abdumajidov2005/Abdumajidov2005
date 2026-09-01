@@ -77,8 +77,9 @@
 
 <h1>Backend skills</h1>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i2=js,nodejs,express,postman,prisma,sql,postgresql" />
+  <img src="https://skillicons.dev/icons?i=js,nodejs,express,postman,prisma,sql,postgresql" />
 </p>
+
 
 ---
 
