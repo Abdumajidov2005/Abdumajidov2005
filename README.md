@@ -71,7 +71,7 @@
 ## 💻 Tech Stack
 
 <p>
-  <img src="https://skillicons.dev/icons?i=js,ts,react,vue,nuxt,nodejs,express,html,css,tailwind,sass,postman,git,github" />
+  <img src="https://skillicons.dev/icons?i=js,ts,react,vue,nuxt,nodejs,express,html,css,tailwind,sass,postman,git,github,prisma" />
 </p>
 
 ---
