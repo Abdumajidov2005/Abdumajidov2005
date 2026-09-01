@@ -70,14 +70,19 @@
 
 ## 💻 Tech Stack
 
+<h1>Programming language</h1>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=js,ts,dart" />
+</p>
+
 <h1>Frontend skills</h1>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=js,ts,react,vue,nuxt,html,css,tailwind,sass,git,github" />
+  <img src="https://skillicons.dev/icons?i=html,css,tailwind,sass,react,vue,nuxt,git,github" />
 </p>
 
 <h1>Backend skills</h1>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=js,nodejs,express,postman,prisma,sql,postgresql" />
+  <img src="https://skillicons.dev/icons?i=nodejs,express,postman,prisma,postgresql" />
 </p>
 
 
