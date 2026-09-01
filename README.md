@@ -70,8 +70,14 @@
 
 ## 💻 Tech Stack
 
-<p>
-  <img src="https://skillicons.dev/icons?i=js,ts,react,vue,nuxt,nodejs,express,html,css,tailwind,sass,postman,git,github,prisma" />
+<h1>Frontend skills</h1>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=js,ts,react,vue,nuxt,html,css,tailwind,sass,git,github" />
+</p>
+
+<h1>Backend skills</h1>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=js,nodejs,express,postman,prisma, sql, postgresql" />
 </p>
 
 ---
